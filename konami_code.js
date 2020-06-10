@@ -18,10 +18,10 @@ function init() {
 
   function handleKey(event) {
 
-    if (event.key === code[index]) {
+    if (event.key === codes[index]) {
       index++
-      if (index === code.length) {
-        window.alert("Hurray")
+      if (index === codes.length) {
+        window.alert("Hurray!")
         index = 0
       }
     } else {
