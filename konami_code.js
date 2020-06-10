@@ -21,8 +21,7 @@ function init() {
     if (event.key === code[index]) {
       index++
       if (index === code.length) {
-        alert("YOU DID IT!")
-        return true
+        window.alert("Hurray!")
         index = 0
       }
     } else {
