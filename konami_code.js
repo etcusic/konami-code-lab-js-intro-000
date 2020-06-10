@@ -11,21 +11,23 @@ const codes = [
   "a"
 ];
 
-var event = document.body.addEventListener("keydown", init)
+function init() {
 
-var accumulator = 0
+  var index = 0
+  document.body.addEventListener('keydown', handleKey);
 
-let init = function (event) {
-  if (event.key !== codes[accumulator]){
-    accumulator = 0
-    return
-  }
+  function handleKey(event) {
 
-  accumulator++
-
-  if (codes.length === accumulator){
-    window.alert("Hurray!")
+    if (event.key === code[index]) {
+      index++
+      if (index === code.length) {
+        alert("YOU DID IT!")
+        index = 0
+      }
+    } else {
+      index = 0
+    }
   }
 }
 
-// var event = document.body.addEventListener("keydown", init)
+init()
